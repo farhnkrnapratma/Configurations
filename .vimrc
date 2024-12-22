@@ -12,6 +12,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
@@ -29,6 +30,8 @@ filetype indent on
 
 " Set
 
+set nocompatible
+set termguicolors
 set showmode
 set number
 set ruler
@@ -59,7 +62,8 @@ set statusline+=%*
 
 " Airline theme
 
-let g:airline_theme='deus'
+let g:airline_theme='catppuccin_mocha'
+let g:airline#extensions#tabline#enabled=1
 
 " Indent line
 
@@ -73,6 +77,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Hide EoB
+
+let &fillchars ..= ',eob: '
 
 " --------------------------------------------------------------------------------------------------------------------------- }}}
 
