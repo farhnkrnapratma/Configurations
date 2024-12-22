@@ -1,3 +1,5 @@
+set nocompatible
+set showmode
 set number
 set ruler
 set tabstop=4
@@ -5,8 +7,19 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set mouse=a
+set cursorline
+set cursorcolumn
+set nowrap
+set scrolloff=10
+set wildmenu
+set wildmode=list:longest
 set encoding=UTF-8
 syntax on
+filetype on
+filetype plugin on
+filetype indent on
+
+" PLUGINS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------{{{
 
 call plug#begin()
 
@@ -26,12 +39,14 @@ Plug 'majutsushi/tagbar'
 
 call plug#end()
 
+" }}}
+
 let g:airline_theme='deus'
 let g:indentLine_char='¦'
 let g:indentLine_color_term=8
 let g:rustfmt_autosave=1
 let g:NERDTreeFileLines=1
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
 
 colorscheme ghdark
 
