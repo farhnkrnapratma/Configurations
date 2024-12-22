@@ -5,13 +5,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" Color scheme
-
-colorscheme ghdark
-
 " Set
 
-set nocompatible
 set showmode
 set number
 set ruler
@@ -20,13 +15,15 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set mouse=a
-set cursorline
-set cursorcolumn
 set nowrap
 set scrolloff=10
 set wildmenu
 set wildmode=list:longest
 set encoding=UTF-8
+
+" Color scheme
+
+colorscheme catppuccin_mocha
 
 " Required for ctags
 
@@ -43,7 +40,6 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
-Plug 'vv9k/vim-github-dark'
 Plug 'townk/vim-autoclose'
 Plug 'rust-lang/rust.vim'
 Plug 'preservim/nerdtree'
@@ -53,6 +49,7 @@ Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call plug#end()
 
