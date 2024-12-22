@@ -1,3 +1,25 @@
+" PLUGINS --------------------------------------------------------------------------------------------------------------------{{{
+
+call plug#begin()
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
+Plug 'townk/vim-autoclose'
+Plug 'rust-lang/rust.vim'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'PhilRunninger/nerdtree-visual-selection'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+
+call plug#end()
+
+" --------------------------------------------------------------------------------------------------------------------------- }}}
+
 " VIM BASIC ------------------------------------------------------------------------------------------------------------------{{{
 
 syntax on
@@ -30,28 +52,6 @@ colorscheme catppuccin_mocha
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
-" --------------------------------------------------------------------------------------------------------------------------- }}}
-
-" PLUGINS --------------------------------------------------------------------------------------------------------------------{{{
-
-call plug#begin()
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
-Plug 'townk/vim-autoclose'
-Plug 'rust-lang/rust.vim'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'PhilRunninger/nerdtree-visual-selection'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/syntastic'
-Plug 'majutsushi/tagbar'
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-
-call plug#end()
 
 " --------------------------------------------------------------------------------------------------------------------------- }}}
 
