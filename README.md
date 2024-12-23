@@ -1,4 +1,4 @@
-![arch-gnome-alacritty](arch-gnome-alacritty.png)
+![arch-gnome](images/arch-gnome.png)
 # dotfiles
 
 This is my dotfiles configuration. All of the configuration files will be updated as long as there are changes. Please read the guide they provided (below) before using their configuration files.
