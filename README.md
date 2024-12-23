@@ -4,7 +4,7 @@ This is my dotfiles configuration
 
 ## Manual
 
-All the configurations of the tools I use. It will be updated as long as there are changes.
+All of the configuration files will be updated as long as there are changes. Please read the guide they provided (below) before using their configuration files.
 
 ### 1. vim-plug
 
