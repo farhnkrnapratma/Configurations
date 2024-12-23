@@ -1,22 +1,22 @@
 # dotfiles
-My dotfiles configuration
+This is my dotfiles configuration
 
-## Alacritty Theme
+## Manual
 
-Collection of colorschemes for easy configuration of the Alacritty terminal emulator. Clone the repository, or download the theme of your choice:
+All the configurations of the tools I use. It will be updated as long as there are changes.
 
-```
-# We use Alacritty's default Linux config directory as our storage location here.
-mkdir -p ~/.config/alacritty/themes
-git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
-```
+### 1. vim-plug
 
-Add an import to your alacritty.toml (Replace {theme} with your desired colorscheme):
+GitHub: [https://github.com/junegunn/vim-plug](https://github.com/junegunn/vim-plug)
 
+### 2. alacrity
 
-```
-[general]
-import = [
-    "~/.config/alacritty/themes/themes/{theme}.toml"
-]
-```
+GitHub: [https://github.com/alacritty/alacritty](https://github.com/alacritty/alacritty)
+
+### 3. alacritty-theme
+
+GitHub: [https://github.com/alacritty/alacritty-theme](https://github.com/alacritty/alacritty-theme)
+
+### 4. neofetch-themes
+
+GitHub: [https://github.com/alacritty/alacritty-theme](https://github.com/Chick2D/neofetch-themes)
