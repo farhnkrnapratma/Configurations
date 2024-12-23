@@ -21,3 +21,11 @@ GitHub: [https://github.com/alacritty/alacritty-theme](https://github.com/alacri
 ### 4. neofetch-themes
 
 GitHub: [https://github.com/alacritty/alacritty-theme](https://github.com/Chick2D/neofetch-themes)
+
+### 5. cava
+
+GitHub: [https://github.com/karlstav/cava](https://github.com/karlstav/cava)
+
+### 6. cava-catppuccin-themes
+
+GitHub: [https://github.com/catppuccin/cava](https://github.com/catppuccin/cava)
