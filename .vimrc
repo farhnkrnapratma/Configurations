@@ -49,6 +49,7 @@ set encoding=UTF-8
 " Color scheme
 
 colorscheme catppuccin_mocha
+hi Normal guibg=NONE ctermbg=NONE
 
 " Required for ctags
 
