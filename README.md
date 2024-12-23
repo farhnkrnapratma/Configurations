@@ -1,3 +1,4 @@
+![arch-gnome-alacritty](arch-gnome-alacritty.png)
 # dotfiles
 This is my dotfiles configuration
 
