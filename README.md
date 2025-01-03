@@ -1,4 +1,4 @@
-![arch-gnome](images/arch-gnome.png)
+![nixos-kde](nixos-kde.png)
 # dotfiles
 
 This is my dotfiles configuration. All of the configuration files will be updated as long as there are changes. Please read the guide they provided (below) before using their configuration files.
