@@ -8,12 +8,12 @@ live_config_reload = true
 size = 11
 
 [font.normal]
-family = "JetBrains Mono"
+family = "Ubuntu Mono"
 style = "Medium"
 
 [window]
 decorations = "None"
-opacity = 0.9
+opacity = 0.5
 blur = true
 startup_mode = "Maximized"
 

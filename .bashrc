@@ -4,9 +4,8 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # User
-alias sysupd='sudo pacman -Syu && yay -Syu'
+alias config="sudo vim /etc/nixos/configuration.nix && sudo nixos-rebuild switch"
 alias vbashrc='vim ~/.bashrc && source ~/.bashrc && clear'
-alias orphclr='sudo pacman -Rns $(pacman -Qdtq) && yay -Rns $(pacman -Qdtq)'
 alias clear="clear && echo '' && neofetch"
 alias valacr='vim .alacritty.toml'
 
