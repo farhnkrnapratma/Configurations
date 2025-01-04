@@ -5,6 +5,7 @@ alias grep='grep --color=auto'
 
 # User
 alias config="sudo vim /etc/nixos/configuration.nix && sudo nixos-rebuild switch"
+alias cleaning="sudo nix-collect-garbage -d"
 alias vbashrc='vim ~/.bashrc && source ~/.bashrc && clear'
 alias clear="clear && echo '' && neofetch"
 alias valacr='vim .alacritty.toml'
