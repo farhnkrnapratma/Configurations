@@ -8,7 +8,7 @@ alias cleaning="sudo nix-collect-garbage -d"
 alias vbashrc="vim ~/.bashrc && source ~/.bashrc && clear"
 alias valacrt="vim ~/.alacritty.toml"
 
-PS1='\[\e[36m\] 󰘳  \u   \w  \[\e[0m\]'
+PS1='\[\e[36m\]  \u  󰌽 \h   \w   \[\e[0m\]'
 
 echo ""
 neofetch
