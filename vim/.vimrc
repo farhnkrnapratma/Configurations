@@ -94,16 +94,16 @@ let g:NERDTreeShowHidden=1
 " NERDTree Git
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ 'Modified'  : 'modified',
-    \ 'Staged'    : 'staged',
-    \ 'Untracked' : 'untracked',
-    \ 'Renamed'   : 'renamed',
-    \ 'Unmerged'  : 'unmerged',
-    \ 'Deleted'   : 'deleted',
-    \ 'Dirty'     : 'dirty',
-    \ 'Ignored'   : 'ignored',
-    \ 'Clean'     : 'clean',
-    \ 'Unknown'   : 'unknown',
+    \ 'Modified'  : '',
+    \ 'Staged'    : '',
+    \ 'Untracked' : '',
+    \ 'Renamed'   : '',
+    \ 'Unmerged'  : '',
+    \ 'Deleted'   : '',
+    \ 'Dirty'     : '󰈿',
+    \ 'Ignored'   : '',
+    \ 'Clean'     : '',
+    \ 'Unknown'   : '',
     \ }
 
 highlight NERDTreeGitModified guifg=#FFA500 ctermfg=214
