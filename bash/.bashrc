@@ -10,7 +10,7 @@ alias vbashrc='vim ~/.bashrc && source ~/.bashrc && clear'
 alias clear="clear && echo '' && neofetch"
 alias valacr='vim .alacritty.toml'
 
-PS1='\[\033[1;3;35m\]\u\[\033[0m\]\[\033[1;92m\]@\[\033[0m\]\[\033[1;34m\]\h\[\033[0m\]\[\033[1;36m\][\[\033[0m\]\[\033[1;36m\]\W\[\033[0m\]\[\033[1;36m\]]\[\033[0m\]\[\033[1;34m\]> \[\033[0m\]'
+PS1='\[\e[36m\] (\w)  \[\e[0m\]'
 
 echo ""
 neofetch

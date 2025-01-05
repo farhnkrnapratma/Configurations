@@ -16,6 +16,7 @@ Plug 'rbong/vim-flog'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -93,16 +94,16 @@ let g:NERDTreeShowHidden=1
 " NERDTree Git
 
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-    \ 'Modified'  : '*',
-    \ 'Staged'    : '+',
-    \ 'Untracked' : '?',
-    \ 'Renamed'   : '>',
-    \ 'Unmerged'  : '!',
-    \ 'Deleted'   : '-',
-    \ 'Dirty'     : '~',
-    \ 'Ignored'   : '#',
-    \ 'Clean'     : '.',
-    \ 'Unknown'   : '?',
+    \ 'Modified'  : 'modified',
+    \ 'Staged'    : 'staged',
+    \ 'Untracked' : 'untracked',
+    \ 'Renamed'   : 'renamed',
+    \ 'Unmerged'  : 'unmerged',
+    \ 'Deleted'   : 'deleted',
+    \ 'Dirty'     : 'dirty',
+    \ 'Ignored'   : 'ignored',
+    \ 'Clean'     : 'clean',
+    \ 'Unknown'   : 'unknown',
     \ }
 
 highlight NERDTreeGitModified guifg=#FFA500 ctermfg=214
