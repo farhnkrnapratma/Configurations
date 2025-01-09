@@ -32,7 +32,7 @@ alias nxdgrbg="sudo nix-collect-garbage -d"
 
 # PS1---{{{
 
-PS1='\n\[\033[36m\]\[\033[0m\]\[\033[46m\]\[\033[1;30m\] \w\[\033[0m\]\[\033[36m\] \[\033[0m\] '
+PS1='\[\033[1;36m\]\w  \[\033[0m\]'
 
 #---}}}
 
@@ -41,9 +41,9 @@ PS1='\n\[\033[36m\]\[\033[0m\]\[\033[46m\]\[\033[1;30m\] \w\[\033[0m\]\[\0
 # When the clear command is executed then run it too...
 clear() {
     command clear
-    neofetch
+    pfetch
 }
 
-neofetch
+pfetch
 
 #---}}}

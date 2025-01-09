@@ -100,42 +100,33 @@
     # System Packages
     #
     nixpkgs.config.allowUnfree = true;
-    programs.firefox.enable = true;
 
     environment.systemPackages = with pkgs; [
         # Development Tools
         vim
-	ctags
 	helix
-	zed-editor
         gh
         git
 	docker
-	conan
 	poetry
+	ctags
 
         # System Utilities
         tmux
 	btop
-        neofetch
+	pfetch-rs
 
         # Terminals
-	kitty
         alacritty
-        alacritty-theme
 
         # Applications
         spotify
         cava
 	libreoffice-fresh
 	kdePackages.kdeconnect-kde
-	google-chrome
 	steam
 
 	# Development
-	jdk23
-	kotlin
-	libgcc
 	python3Full
 	rustup	
     ];
@@ -148,8 +139,14 @@
         ubuntu-sans-mono
         nerdfonts
     ];
+
+    #
+    # Programs
+    #
     programs.kdeconnect.enable = true;
     programs.steam.enable = true;
+    programs.firefox.enable = true;
+
     #
     # Services
     #
