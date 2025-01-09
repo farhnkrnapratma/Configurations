@@ -15,6 +15,7 @@ alias grep="grep --color=auto"
 alias bashrc="$EDITOR ~/.bashrc && source ~/.bashrc && clear"
 
 # NixOS
+alias nxsuedit="sudo $EDITOR /etc/nixos/configuration.nix"
 alias nxsedit="sudo nixos-rebuild edit"
 alias nxswitch="sudo nixos-rebuild switch"
 alias nxsboot="sudo nixos-rebuild boot"
@@ -31,14 +32,7 @@ alias nxdgrbg="sudo nix-collect-garbage -d"
 
 # PS1---{{{
 
-# with_icon boolean
-with_icon=true
-
-if [[ $with_icon == true ]]; then
-    PS1='\n\[\e[34m\]╭\[\e[0m\]\[\e[44m\e[30m\] \[\e[1m\]\u\[\e[0m\e[34m\]─\[\e[0m\]\[\e[44m\e[30m\] \[\e[1m\]\h\[\e[0m\e[34m\]─\[\e[0m\]\[\e[44m\e[30m\] \[\e[1m\]\d\[\e[0m\e[34m\]─\[\e[0m\]\[\e[44m\e[30m\] \[\e[1m\]\t\[\e[0m\e[34m\]─\[\e[0m\]\[\e[44m\e[30m\] \[\e[1m\]\!│ \#\[\e[0m\e[34m\]\n│\n╰\[\e[0m\]\[\e[44m\e[30m\] \[\e[1m\]\w\[\e[0m\e[34m\] \[\e[0m\] '
-else
-    PS1='\n\[\e[34m\]╭\[\e[0m\]\[\e[44m\e[30;1m\]\u\[\e[0m\e[34m\]─\[\e[0m\]\[\e[44m\e[30;1m\]\h\[\e[0m\e[34m\]─\[\e[0m\]\[\e[44m\e[30;1m\]\d\[\e[0m\e[34m\]─\[\e[0m\]\[\e[44m\e[30;1m\]\t\[\e[0m\e[34m\]─\[\e[0m\]\[\e[44m\e[30;1m\]\!│\#\[\e[0m\e[34m\]\n│\n╰\[\e[0m\]\[\e[44m\e[30;1m\]\w\[\e[0m\e[34m\] \[\e[0m\] '
-fi
+PS1='\n\[\033[36m\]\[\033[0m\]\[\033[46m\]\[\033[1;30m\] \w\[\033[0m\]\[\033[36m\] \[\033[0m\] '
 
 #---}}}
 
@@ -49,6 +43,7 @@ clear() {
     command clear
     neofetch
 }
+
 neofetch
 
 #---}}}
