@@ -54,13 +54,8 @@
     #
     # Desktop Environment
     #
-    services.xserver = {
-        enable = true;
-        xkb = {
-            layout = "us";
-            variant = "";
-        };
-    };
+    services.xserver.enable = false;
+    services.desktopManager.plasma6.enable = true;
 
     services.displayManager = {
         sddm.enable = true;
@@ -69,11 +64,12 @@
             user = "farhnkrnapratma";
         };
     };
-    services.desktopManager.plasma6.enable = true;
 
     #
     # Audio
     #
+    hardware.bluetooth.enable = true;
+    hardware.bluetooth.powerOnBoot = true;
     hardware.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
@@ -101,9 +97,23 @@
     #
     nixpkgs.config.allowUnfree = true;
 
+    environment.plasma6.excludePackages = with pkgs.kdePackages; [
+  	plasma-browser-integration
+  	konsole
+	oxygen
+	kate
+	elisa
+	khelpcenter
+	kcrash
+	kcharselect
+	ark
+	drkonqi
+    ];
+
     environment.systemPackages = with pkgs; [
         # Development Tools
         vim
+	neovim
 	helix
         gh
         git
@@ -114,7 +124,9 @@
         # System Utilities
         tmux
 	btop
+	neofetch
 	pfetch-rs
+	unzip
 
         # Terminals
         alacritty
@@ -124,11 +136,11 @@
         cava
 	libreoffice-fresh
 	kdePackages.kdeconnect-kde
-	steam
 
 	# Development
 	python3Full
 	rustup	
+	gcc
     ];
 
     #
@@ -144,9 +156,7 @@
     # Programs
     #
     programs.kdeconnect.enable = true;
-    programs.steam.enable = true;
     programs.firefox.enable = true;
-
     #
     # Services
     #
