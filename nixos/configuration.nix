@@ -58,11 +58,11 @@
     services.desktopManager.plasma6.enable = true;
 
     services.displayManager = {
-        sddm.enable = true;
-        autoLogin = {
-            enable = true;
-            user = "farhnkrnapratma";
-        };
+        sddm = {
+	    enable = true;
+	    theme = "catppuccin-mocha";
+	};
+        autoLogin.enable = false;
     };
 
     #
@@ -93,10 +93,13 @@
     };
 
     #
-    # System Packages
+    # Allow Unfree Packages
     #
     nixpkgs.config.allowUnfree = true;
-
+    
+    #
+    # Exclude Some KDE Default Packages
+    #
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
   	plasma-browser-integration
   	konsole
@@ -108,10 +111,35 @@
 	kcharselect
 	ark
 	drkonqi
+	xwaylandvideobridge
+	ktexteditor
+	kuserfeedback
     ];
-
+    
+    #    
+    # User Packages
+    #
     environment.systemPackages = with pkgs; [
-        # Development Tools
+	# KDE Packages
+	kdePackages.kdeconnect-kde
+	kdePackages.sddm-kcm
+	kdePackages.kwallet-pam
+	kdePackages.korganizer
+	kdePackages.konversation
+	kdePackages.kontact
+	kdePackages.kontactinterface
+	kdePackages.koko
+	kdePackages.kalarm
+	kdePackages.kaddressbook
+	kdePackages.kaccounts-providers
+	kdePackages.kaccounts-integration
+	kdePackages.isoimagewriter
+	kdePackages.eventviews
+	kdePackages.discover
+	kdePackages.flatpak-kcm
+	kdePackages.calendarsupport
+        
+	# Development Tools
         vim
 	neovim
 	helix
@@ -120,6 +148,11 @@
 	docker
 	poetry
 	ctags
+	
+	# Programming Language	
+	python3Full
+	rustup
+	gcc
 
         # System Utilities
         tmux
@@ -127,6 +160,9 @@
 	neofetch
 	pfetch-rs
 	unzip
+	wget
+	flatpak
+	flatpak-builder
 
         # Terminals
         alacritty
@@ -135,12 +171,17 @@
         spotify
         cava
 	libreoffice-fresh
-	kdePackages.kdeconnect-kde
+	discord
+	telegram-desktop
+	google-chrome
+	thunderbird
 
-	# Development
-	python3Full
-	rustup	
-	gcc
+	(catppuccin-sddm.override {
+    	    flavor = "mocha";
+    	    font  = "Ubuntu Sans Mono";
+    	    fontSize = "12";
+    	    loginBackground = true;
+  	})
     ];
 
     #
@@ -157,19 +198,19 @@
     #
     programs.kdeconnect.enable = true;
     programs.firefox.enable = true;
+    programs.gnupg.agent = {
+	enable = true;
+	enableSSHSupport = true;
+    };
     #
     # Services
     #
     services.printing.enable = true;
+    services.openssh.enable = true;   
 
     # Optional Services
     # services.xserver.libinput.enable = true;
-    # services.openssh.enable = true;
     # programs.mtr.enable = true;
-    # programs.gnupg.agent = {
-    #     enable = true;
-    #     enableSSHSupport = true;
-    # };
     # networking.firewall = {
     #     allowedTCPPorts = [ ... ];
     #     allowedUDPPorts = [ ... ];
