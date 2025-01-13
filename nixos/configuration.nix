@@ -123,21 +123,7 @@
 	# KDE Packages
 	kdePackages.kdeconnect-kde
 	kdePackages.sddm-kcm
-	kdePackages.kwallet-pam
-	kdePackages.korganizer
-	kdePackages.konversation
-	kdePackages.kontact
-	kdePackages.kontactinterface
-	kdePackages.koko
-	kdePackages.kalarm
-	kdePackages.kaddressbook
-	kdePackages.kaccounts-providers
-	kdePackages.kaccounts-integration
 	kdePackages.isoimagewriter
-	kdePackages.eventviews
-	kdePackages.discover
-	kdePackages.flatpak-kcm
-	kdePackages.calendarsupport
         
 	# Development Tools
         vim
@@ -161,8 +147,6 @@
 	pfetch-rs
 	unzip
 	wget
-	flatpak
-	flatpak-builder
 
         # Terminals
         alacritty
@@ -174,7 +158,6 @@
 	discord
 	telegram-desktop
 	google-chrome
-	thunderbird
 
 	(catppuccin-sddm.override {
     	    flavor = "mocha";
