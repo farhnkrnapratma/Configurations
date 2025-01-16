@@ -123,7 +123,6 @@
 	# KDE Packages
 	kdePackages.kdeconnect-kde
 	kdePackages.sddm-kcm
-	kdePackages.isoimagewriter
         
 	# Development Tools
         vim
@@ -134,6 +133,7 @@
 	docker
 	poetry
 	ctags
+	vscode
 	
 	# Programming Language	
 	python3Full
