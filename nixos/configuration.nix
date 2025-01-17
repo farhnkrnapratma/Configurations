@@ -114,6 +114,7 @@
 	xwaylandvideobridge
 	ktexteditor
 	kuserfeedback
+	oxygen-icons
     ];
     
     #    
@@ -158,6 +159,7 @@
 	discord
 	telegram-desktop
 	google-chrome
+	tor-browser
 
 	(catppuccin-sddm.override {
     	    flavor = "mocha";
@@ -165,6 +167,7 @@
     	    fontSize = "12";
     	    loginBackground = true;
   	})
+	catppuccin-kde
     ];
 
     #

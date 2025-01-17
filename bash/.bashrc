@@ -41,9 +41,9 @@ PS1='\[\033[1;36m\]\w  \[\033[0m\]'
 # When the clear command is executed then run it too...
 clear() {
     command clear
-    pfetch
+    neofetch
 }
 
-pfetch
+neofetch
 
 #---}}}
