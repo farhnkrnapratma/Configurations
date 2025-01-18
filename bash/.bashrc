@@ -15,6 +15,7 @@ alias grep="grep --color=auto"
 alias bashrc="$EDITOR ~/.bashrc && source ~/.bashrc && clear"
 
 # NixOS
+#
 alias nxsuedit="sudo $EDITOR /etc/nixos/configuration.nix"
 alias nxsedit="sudo nixos-rebuild edit"
 alias nxswitch="sudo nixos-rebuild switch"
@@ -22,7 +23,7 @@ alias nxsboot="sudo nixos-rebuild boot"
 alias nxstest="sudo nixos-rebuild test"
 alias nxsbuild="sudo nixos-rebuild build"
 alias nxsdbuild="sudo nixos-rebuild dry-build"
-alias nxsdactvt="sudo nixos-rebuild dry-activate"t
+alias nxsdactvt="sudo nixos-rebuild dry-activate"
 
 # Nix
 alias nxcupdt="sudo nix-channel --update"

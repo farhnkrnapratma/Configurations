@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
     imports = [
         ./hardware-configuration.nix
@@ -8,6 +7,15 @@
     #
     # System Configuration
     #
+
+    # Sudo
+    security.sudo = {
+	enable = true;
+	extraConfig = ''
+    	    %wheel ALL=(ALL) NOPASSWD: ALL
+ 	'';
+    };
+
     system.stateVersion = "24.11";
 
     # Bootloader
@@ -56,7 +64,6 @@
     #
     services.xserver.enable = false;
     services.desktopManager.plasma6.enable = true;
-
     services.displayManager = {
         sddm = {
 	    enable = true;
@@ -79,8 +86,7 @@
             support32Bit = true;
         };
         pulse.enable = true;
-        # jack.enable = true;
-        # media-session.enable = true;
+        jack.enable = true;
     };
 
     #
@@ -104,6 +110,7 @@
   	plasma-browser-integration
   	konsole
 	oxygen
+	oxygen-icons
 	kate
 	elisa
 	khelpcenter
@@ -114,11 +121,10 @@
 	xwaylandvideobridge
 	ktexteditor
 	kuserfeedback
-	oxygen-icons
     ];
     
     #    
-    # User Packages
+    # Packages
     #
     environment.systemPackages = with pkgs; [
 	# KDE Packages
@@ -132,20 +138,12 @@
         gh
         git
 	docker
-	poetry
 	ctags
-	vscode
-	
-	# Programming Language	
-	python3Full
-	rustup
-	gcc
-
-        # System Utilities
+        
+	# System Utilitie
         tmux
 	btop
 	neofetch
-	pfetch-rs
 	unzip
 	wget
 
@@ -160,7 +158,10 @@
 	telegram-desktop
 	google-chrome
 	tor-browser
-
+	obs-studio
+	mpv
+	
+	# SDDM Catppuccin
 	(catppuccin-sddm.override {
     	    flavor = "mocha";
     	    font  = "Ubuntu Sans Mono";
@@ -188,6 +189,7 @@
 	enable = true;
 	enableSSHSupport = true;
     };
+
     #
     # Services
     #

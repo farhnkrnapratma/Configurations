@@ -12,7 +12,7 @@ family = "Ubuntu Sans Mono"
 style = "Medium"
 
 [window]
-decorations = "Transparent"
+decorations = "Full"
 opacity = 0.9
 blur = true
 startup_mode = "Maximized"
