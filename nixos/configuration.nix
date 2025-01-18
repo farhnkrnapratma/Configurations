@@ -135,6 +135,7 @@
         vim
 	neovim
 	helix
+	vscode
         gh
         git
 	docker
@@ -160,6 +161,7 @@
 	tor-browser
 	obs-studio
 	mpv
+	irssi
 	
 	# SDDM Catppuccin
 	(catppuccin-sddm.override {
