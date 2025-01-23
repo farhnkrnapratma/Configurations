@@ -12,10 +12,15 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
 # Open and edit Bash run commands ~/.bashrc
-alias bashrc="$EDITOR ~/.bashrc && source ~/.bashrc && clear"
+alias bashrc="$EDITOR ~/.bashrc && source ~/.bashrc && cp ~/.bashrc ~/Project/Configurations/bash && clear"
+
+# Git
+alias gtcmt="git add . && git commit -m"
+alias gtpsh="git push"
+alias gtsts="git status"
+alias gtbrc="git branch"
 
 # NixOS
-#
 alias nxsuedit="sudo $EDITOR /etc/nixos/configuration.nix"
 alias nxsedit="sudo nixos-rebuild edit"
 alias nxswitch="sudo nixos-rebuild switch"
@@ -33,7 +38,7 @@ alias nxdgrbg="sudo nix-collect-garbage -d"
 
 # PS1---{{{
 
-PS1='\[\033[1;36m\]\w  \[\033[0m\]'
+PS1='\[\033[1;36m\] \u@\h  \[\033[0m\]'
 
 #---}}}
 
@@ -42,9 +47,11 @@ PS1='\[\033[1;36m\]\w  \[\033[0m\]'
 # When the clear command is executed then run it too...
 clear() {
     command clear
+    echo ""
     neofetch
 }
 
+echo ""
 neofetch
 
 #---}}}
