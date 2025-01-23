@@ -1,4 +1,5 @@
 { config, pkgs, ... }:
+
 {
     imports = [
         ./hardware-configuration.nix
@@ -24,6 +25,7 @@
         efi.canTouchEfiVariables = true;
     };
     boot.kernelPackages = pkgs.linuxPackages_latest;
+    boot.kernelParams = [ "quiet" "loglevel=0" "nosplash" ];
 
     # Time and Locale
     time.timeZone = "Asia/Jakarta";
@@ -138,7 +140,6 @@
 	vscode
         gh
         git
-	docker
 	ctags
         
 	# System Utilitie
@@ -155,19 +156,13 @@
         spotify
         cava
 	libreoffice-fresh
-	discord
-	telegram-desktop
-	google-chrome
-	tor-browser
-	obs-studio
-	mpv
-	irssi
 	
 	# SDDM Catppuccin
 	(catppuccin-sddm.override {
     	    flavor = "mocha";
-    	    font  = "Ubuntu Sans Mono";
+    	    font  = "UbuntuSansMono NF Medium";
     	    fontSize = "12";
+	    background = "${./desktop-wallpaper.jpg}";
     	    loginBackground = true;
   	})
 	catppuccin-kde
@@ -177,8 +172,6 @@
     # Fonts
     #
     fonts.packages = with pkgs; [
-        ubuntu-sans
-        ubuntu-sans-mono
         nerdfonts
     ];
 
