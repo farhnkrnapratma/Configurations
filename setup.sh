@@ -1,4 +1,13 @@
-#!/bin/bash
+#!/bin/sh
+
+if [ -f "/etc/os-release" ] && grep -q "ID=nixos" /etc/os-release; then
+    bash_path="/usr/bin/env bash"
+else
+    bash_path="/bin/bash"
+fi
+
+"$bash_path" -c 'echo "This is running on the correct bash path: $0"'
+
 
 copy() {
     type=$1
