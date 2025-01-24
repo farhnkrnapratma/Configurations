@@ -160,7 +160,7 @@
             flavor = "mocha";
             font  = "UbuntuSansMono NF Medium";
             fontSize = "12";
-	        background = "${./desktop-wallpaper.jpg}";
+	        background = "${./wallpaper.jpg}";
     	    loginBackground = true;
   	    })
 	    catppuccin-kde
