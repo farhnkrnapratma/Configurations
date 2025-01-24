@@ -69,27 +69,27 @@ copy() {
 
 bash() {
     copy f 0 ./bash/.bashrc $HOME
-    source ~/.bashrc
+    source $HOME.bashrc
     echo "Bash: Done."
 }
 
 btop() {
-    copy f 0 ./btop/btop.conf ~/.config/btop/
+    copy f 0 ./btop/btop.conf $HOME.config/btop/
     echo "Btop: Done."
 }
 
 cava() {
-    copy f 0 ./cava/config ~/.config/cava/
+    copy f 0 ./cava/config $HOME.config/cava/
     echo "Cava: Done."
 }
 
 kitty() {
-    copy f 0 ./kitty/kitty.conf ~/.config/kitty/
+    copy f 0 ./kitty/kitty.conf $HOME.config/kitty/
     echo "Kitty: Done."
 }
 
 neofetch() {
-    copy f 0 ./neofetch/config.conf ~/.config/neofetch/
+    copy f 0 ./neofetch/config.conf $HOME.config/neofetch/
     echo "Neofetch: Done."
 }
 
@@ -112,7 +112,7 @@ tmux() {
 }
 
 vim() {
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl -fLo $HOME.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     copy f 0 ./vim/.vimrc $HOME
     echo "Vim: Done."
 }
