@@ -76,6 +76,25 @@ copy() {
     fi
 }
 
+nerdfonts() {
+    family="UbuntuMono"
+    url="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/$family.zip"
+    echo $url
+    mkdir -p $HOME/$family
+    wget -P $HOME/$family $url
+    unzip $HOME/$family/$family.zip -d $HOME/$family
+    rm $HOME/$family/$family.zip
+    find $HOME/$family -type f ! -name "*.ttf" -exec rm {} +
+    
+    if [ ! -d "/usr/share/fonts/truetype" ]; then
+        sudo mv $HOME/$family /usr/share/fonts
+    else
+        sudo mv $HOME/$family /usr/share/fonts/truetype
+    fi
+
+    echo "Nerd Fonts: Done."
+}
+
 bash() {
     copy f 0 ./bash/.bashrc $HOME
     source $HOME/.bashrc
@@ -145,6 +164,7 @@ full_setup() {
         tmux
         vim
     else
+        nerdfonts
         bash
         btop
         cava
@@ -175,7 +195,8 @@ echo "[5] Kitty"
 echo "[6] Neofetch"
 echo "[7] Tmux"
 echo "[8] Vim"
-echo "[9] Exit"
+echo "[9] Nerd Fonts"
+echo "[10] Exit"
 
 read -p "Enter option: " option
 
@@ -188,6 +209,7 @@ case $option in
     6) neofetch ;;
     7) tmux ;;
     8) vim ;;
-    9) echo "Exit..."; exit ;;
+    9) nerdfonts ;;
+    10) echo "Exit..."; exit ;;
     *) echo "Invalid option." ;;
 esac

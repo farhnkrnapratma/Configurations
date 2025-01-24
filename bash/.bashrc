@@ -2,16 +2,21 @@ export EDITOR=vim
 export VISUAL=vim
 
 # PS1
-PS1='\[\033[1;36m\]╭ (\033[1;31m\w\033[0m\[\033[1;36m\])\n│\n╰ (\033[1;35m\u@\h\033[0m\033[1;36m)  \[\033[0m\]'
+PS1='\[\033[1;36m\]╭ (\033[1;31m\W\033[0m\[\033[1;36m\])\n│\n╰ (\033[1;35m\u@\h\033[0m\033[1;36m)  \[\033[0m\]'
 
+# Override clear command
+clear() {
+    command clear
+    echo ''
+    neofetch
+}
 # Run
-echo ""
+echo ''
 neofetch
 
 # System
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
-alias clear="clear && echo '' && neofetch"
 # Bash
 alias bashrc="$EDITOR ~/.bashrc && source ~/.bashrc && clear"
 # Cava
