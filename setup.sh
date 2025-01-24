@@ -85,6 +85,7 @@ cava() {
 
 kitty() {
     copy f 0 ./kitty/kitty.conf $HOME.config/kitty/
+    copy f 0 ./kitty/current-theme.conf $HOME.config/kitty/
     echo "Kitty: Done."
 }
 
