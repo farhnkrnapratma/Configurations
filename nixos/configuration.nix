@@ -13,7 +13,7 @@
     security.sudo = {
 	enable = true;
 	extraConfig = ''
-    	    %wheel ALL=(ALL) NOPASSWD: ALL
+    	%wheel ALL=(ALL) NOPASSWD: ALL
  	'';
     };
 
@@ -25,7 +25,6 @@
         efi.canTouchEfiVariables = true;
     };
     boot.kernelPackages = pkgs.linuxPackages_latest;
-    boot.kernelParams = [ "quiet" "loglevel=0" "nosplash" ];
 
     # Time and Locale
     time.timeZone = "Asia/Jakarta";
@@ -64,14 +63,12 @@
     #
     # Desktop Environment
     #
-    services.xserver.enable = false;
     services.desktopManager.plasma6.enable = true;
     services.displayManager = {
         sddm = {
 	    enable = true;
 	    theme = "catppuccin-mocha";
 	};
-        autoLogin.enable = false;
     };
 
     #
@@ -109,63 +106,64 @@
     # Exclude Some KDE Default Packages
     #
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
-  	plasma-browser-integration
-  	konsole
-	oxygen
-	oxygen-icons
-	kate
-	elisa
-	khelpcenter
-	kcrash
-	kcharselect
-	ark
-	drkonqi
-	xwaylandvideobridge
-	ktexteditor
-	kuserfeedback
+        plasma-browser-integration
+        konsole
+        oxygen
+        oxygen-icons
+        kate
+        elisa
+        khelpcenter
+        kcrash
+        kcharselect
+        ark
+        drkonqi
+        xwaylandvideobridge
+        ktexteditor
+        kuserfeedback
     ];
     
     #    
     # Packages
     #
     environment.systemPackages = with pkgs; [
-	# KDE Packages
-	kdePackages.kdeconnect-kde
-	kdePackages.sddm-kcm
-        
-	# Development Tools
+        # KDE Packages
+        kdePackages.kdeconnect-kde
+        kdePackages.sddm-kcm
+            
+        # Development Tools
         vim
-	neovim
-	helix
-	vscode
+        neovim
+        helix
+        vscode
         gh
         git
-	ctags
+	    ctags
         
-	# System Utilitie
+    	# System Utilitie
         tmux
-	btop
-	neofetch
-	unzip
-	wget
+        btop
+        neofetch
+        unzip
+        wget
 
         # Terminals
-        alacritty
+    	kitty
 
         # Applications
         spotify
         cava
-	libreoffice-fresh
-	
-	# SDDM Catppuccin
-	(catppuccin-sddm.override {
-    	    flavor = "mocha";
-    	    font  = "UbuntuSansMono NF Medium";
-    	    fontSize = "12";
-	    background = "${./desktop-wallpaper.jpg}";
+        libreoffice-fresh
+        google-chrome
+        
+        # SDDM Catppuccin
+        (catppuccin-sddm.override {
+            flavor = "mocha";
+            font  = "UbuntuSansMono NF Medium";
+            fontSize = "12";
+	        background = "${./desktop-wallpaper.jpg}";
     	    loginBackground = true;
-  	})
-	catppuccin-kde
+  	    })
+	    catppuccin-kde
     ];
 
     #
