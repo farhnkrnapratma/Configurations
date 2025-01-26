@@ -129,15 +129,14 @@
         # KDE Packages
         kdePackages.kdeconnect-kde
         kdePackages.sddm-kcm
+	kdePackages.kcalc
             
         # Development Tools
         vim
-        neovim
-        helix
         vscode
         gh
         git
-	    ctags
+	ctags
         
     	# System Utilitie
         tmux
@@ -154,6 +153,12 @@
         cava
         libreoffice-fresh
         google-chrome
+	brave
+	tor-browser
+	steam
+	thunderbird
+	wine
+	heroic
         
         # SDDM Catppuccin
         (catppuccin-sddm.override {
