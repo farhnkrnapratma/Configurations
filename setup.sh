@@ -148,7 +148,7 @@ vim() {
 
 nixos() {
     copy f 1 ./nixos/configuration.nix /etc/nixos/
-    copy f 1 ./desktop/wallpaper.jpg /etc/nixos/
+    copy f 1 ./appearance/wallpaper/nixos.jpg /etc/nixos/
     sudo nixos-rebuild switch
     echo "NixOS: Done."
 }

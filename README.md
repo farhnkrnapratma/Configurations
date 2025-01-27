@@ -6,7 +6,7 @@
 
 > Contact: farhnkrnapratma@gmail.com
 
-## Setup
+## Setup - Bash
 
 To setup all configuration files automatically, you can run the commands below:
 
@@ -20,16 +20,38 @@ If an error occurs, try:
 $ bash setup.sh
 ```
 
-## Screenshots
+## Wallpaper
 
-### Debian GNOME with Kitty
+### NixOS
+![nixos](./appearance/wallpaper/nixos.jpg)
 
-![debian-gnome](./screenshot/debian-gnome.png)
+### Debian
 
+![debian](./appearance/wallpaper/debian.jpg)
 
-### NixOS KDE Plasma with Kitty
+### Tux
 
-![nixos-kde](./screenshot/nixos-kde.png)
+![tux](./appearance/wallpaper/tux.jpg)
+
+> Want more distro wallpapers? Please contact me through the contact [`here`](https://gravatar.com/farhnkrnapratma).
+
+## Screenshot
+
+### Debian - GNOME
+
+![debian-gnome](./appearance/screenshot/debian-gnome.png)
+
+### Debian - Kitty
+
+![debian-kitty](./appearance/screenshot/debian-kitty.png)
+
+### NixOS - KDE Plasma
+
+![nixos-kde](./appearance/screenshot/nixos-kde.png)
+
+### NixOS - Kitty
+
+![nixos-kitty](./appearance/screenshot/nixos-kitty.png)
 
 ---
 

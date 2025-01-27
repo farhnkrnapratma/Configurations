@@ -130,6 +130,7 @@
         kdePackages.kdeconnect-kde
         kdePackages.sddm-kcm
 	kdePackages.kcalc
+	kdePackages.kcolorchooser
             
         # Development Tools
         vim
@@ -165,10 +166,12 @@
             flavor = "mocha";
             font  = "UbuntuSansMono NF Medium";
             fontSize = "12";
-	        background = "${./wallpaper.jpg}";
+	        background = "${./nixos.jpg}";
     	    loginBackground = true;
-  	    })
-	    catppuccin-kde
+  	})
+	catppuccin-kde
+	papirus-icon-theme
+	bibata-cursors
     ];
 
     #
@@ -181,6 +184,7 @@
     #
     # Programs
     #
+    programs.steam.enable = true;
     programs.kdeconnect.enable = true;
     programs.firefox.enable = true;
     programs.gnupg.agent = {
