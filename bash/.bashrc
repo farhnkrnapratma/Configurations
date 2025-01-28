@@ -11,22 +11,13 @@ git_branch() {
 
 PS1='\[\033[1;36m\]╭ (\033[1;35m\w\033[0m\[\033[1;36m\])$(git_branch)\n│\n╰ (\033[1;35m\u\033[1;36m@\033[0m\033[1;35m\h\033[0m\033[1;36m) \[\033[0m\]'
 
-
-# Override clear command
-clear() {
-    command clear
-    echo ''
-    neofetch
-}
-# Run
-echo ''
-neofetch
-
 # System
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 # Bash
 alias bashrc="$EDITOR ~/.bashrc && source ~/.bashrc && clear"
+# Neofetch
+alias nfetch="echo '' && neofetch --config ~/Project/dotfiles/neofetch/config.conf --ascii_distro $(uname -n)_small"
 # Cava
 alias cava="TERM=st-256color cava"
 # Git
@@ -43,3 +34,11 @@ alias nbuild="sudo nixos-rebuild build"
 # Nix
 alias nupdate="sudo nix-channel --update"
 alias ngarbage="sudo nix-collect-garbage -d"
+
+# Override clear command
+clear() {
+    command clear
+    nfetch
+}
+# Run
+nfetch
