@@ -1,12 +1,12 @@
-# My dotfiles
+# Linux Desktop Appearance and Configs
 
 ![GitHub License](https://img.shields.io/github/license/farhnkrnapratma/dotfiles)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/farhnkrnapratma)
 ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/farhnkrnapratma)
 
-> Contact: farhnkrnapratma@gmail.com
+> Contact: [`farhnkrnapratma@gmail.com`](farhnkrnapratma@gmail.com)
 
-## Setup - Bash
+## Setup - BASH
 
 To setup all configuration files automatically, you can run the commands below:
 
