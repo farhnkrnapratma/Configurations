@@ -6,6 +6,8 @@
 
 > Contact: [`farhnkrnapratma@gmail.com`](farhnkrnapratma@gmail.com)
 
+---
+
 ## Shell Setup
 
 To setup all configuration files automatically, you can run the commands below:
@@ -15,20 +17,19 @@ $ chmod +x setup.sh
 $ ./setup.sh
 ```
 
+---
+
 ## Wallpaper
 
-### NixOS
 ![nixos](./appearance/wallpaper/nixos.jpg)
 
 > Want more distro wallpapers? Please contact me through the contact [`here`](https://gravatar.com/farhnkrnapratma).
 
+---
+
 ## Screenshot
 
-### NixOS - KDE Plasma
-
 ![nixos-kde](./appearance/screenshot/nixos-kde.png)
-
-### NixOS - Kitty
 
 ![nixos-kitty](./appearance/screenshot/nixos-kitty.png)
 
