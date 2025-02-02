@@ -14,36 +14,15 @@ To setup all configuration files automatically, you can run the commands below:
 $ chmod +x setup.sh
 $ ./setup.sh
 ```
-If an error occurs, try:
-
-```Bash
-$ bash setup.sh
-```
 
 ## Wallpaper
 
 ### NixOS
 ![nixos](./appearance/wallpaper/nixos.jpg)
 
-### Debian
-
-![debian](./appearance/wallpaper/debian.jpg)
-
-### Tux
-
-![tux](./appearance/wallpaper/tux.jpg)
-
 > Want more distro wallpapers? Please contact me through the contact [`here`](https://gravatar.com/farhnkrnapratma).
 
 ## Screenshot
-
-### Debian - GNOME
-
-![debian-gnome](./appearance/screenshot/debian-gnome.png)
-
-### Debian - Kitty
-
-![debian-kitty](./appearance/screenshot/debian-kitty.png)
 
 ### NixOS - KDE Plasma
 
