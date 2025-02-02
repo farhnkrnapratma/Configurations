@@ -6,7 +6,7 @@
 
 > Contact: [`farhnkrnapratma@gmail.com`](farhnkrnapratma@gmail.com)
 
-## Setup - BASH
+## Shell Setup
 
 To setup all configuration files automatically, you can run the commands below:
 
