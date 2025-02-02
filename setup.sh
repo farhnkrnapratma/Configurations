@@ -8,12 +8,16 @@ fi
 
 "$bash_path" -c 'echo "This is running on the correct bash path: $0"'
 
-
 copy() {
     type=$1
     sudo=$2
     src=$3
     dest=$4
+
+    # Define ANSI color codes with bold
+    BB='\033[1;34m'
+    CB='\033[1;36m'
+    NC='\033[0m' # No Color
 
     if [[ -z "$type" || -z "$sudo" || -z "$src" || -z "$dest" ]]; then
         echo "Usage: copy <[f]ile|[d]irectory> <[0]|[1]> <source_path> <destination_path>"
@@ -24,51 +28,51 @@ copy() {
         if [ -f "$src" ]; then
             if [[ "$sudo" == 1 ]]; then
                 if [ ! -d "$dest" ]; then
-                    echo "Folder '$dest' not found. Creating folder..."
+                    echo -e "Folder '${CB}$dest${NC}' not found. Creating folder..."
                     mkdir -p "$dest"
-                    echo "Folder '$dest' has been created."
+                    echo -e "Folder '${CB}$dest${NC}' has been created."
                     sudo cp "$src" "$dest"
                 else
                     sudo cp "$src" "$dest"
                 fi
             else
                 if [ ! -d "$dest" ]; then
-                    echo "Folder '$dest' not found. Creating folder..."
+                    echo -e "Folder '${CB}$dest${NC}' not found. Creating folder..."
                     mkdir -p "$dest"
-                    echo "Folder '$dest' has been created."
+                    echo -e "Folder '${CB}$dest${NC}' has been created."
                     cp "$src" "$dest"
                 else
                     cp "$src" "$dest"
                 fi
             fi
-            echo "File '$src' successfully copied to '$dest'."
+            echo -e "File '${BB}$src${NC}' successfully copied to '${CB}$dest${NC}'."
         else
-            echo "File '$src' not found."
+            echo -e "File '${BB}$src${NC}' not found."
         fi
     elif [[ "$type" == "d" ]]; then
         if [ -d "$src" ]; then
             if [[ "$sudo" == 1 ]]; then
                 if [ ! -d "$dest" ]; then
-                    echo "Folder '$dest' not found. Creating folder..."
+                    echo -e "Folder '${CB}$dest${NC}' not found. Creating folder..."
                     mkdir -p "$dest"
-                    echo "Folder '$dest' has been created."
+                    echo -e "Folder '${CB}$dest${NC}' has been created."
                     sudo cp -r "$src" "$dest"
                 else
                     sudo cp -r "$src" "$dest"
                 fi
             else
                 if [ ! -d "$dest" ]; then
-                    echo "Folder '$dest' not found. Creating folder..."
+                    echo -e "Folder '${CB}$dest${NC}' not found. Creating folder..."
                     mkdir -p "$dest"
-                    echo "Folder '$dest' has been created."
+                    echo -e "Folder '${CB}$dest${NC}' has been created."
                     cp -r "$src" "$dest"
                 else
                     cp -r "$src" "$dest"
                 fi
             fi
-            echo "Folder '$src' successfully copied to '$dest'."
+            echo -e "Folder '${BB}$src${NC}' successfully copied to '${CB}$dest${NC}'."
         else
-            echo "Folder '$src' not found."
+            echo -e "Folder '${BB}$src${NC}' not found."
         fi
     else
         echo "Invalid type. Use 'f' or 'd'."
@@ -85,7 +89,7 @@ nerdfonts() {
     unzip $HOME/$family/$family.zip -d $HOME/$family
     rm $HOME/$family/$family.zip
     find $HOME/$family -type f ! -name "*.ttf" -exec rm {} +
-    
+
     if [ ! -d "/usr/share/fonts/truetype" ]; then
         sudo mv $HOME/$family /usr/share/fonts
     else
@@ -148,6 +152,11 @@ vim() {
 
 nixos() {
     copy f 1 ./nixos/configuration.nix /etc/nixos/
+    copy f 1 ./nixos/audio-configuration.nix /etc/nixos/
+    copy f 1 ./nixos/excluded-packages.nix /etc/nixos/
+    copy f 1 ./nixos/networking-configuration.nix /etc/nixos/
+    copy f 1 ./nixos/system-packages.nix /etc/nixos/
+    copy f 1 ./nixos/user-configuration.nix /etc/nixos/
     copy f 1 ./appearance/wallpaper/nixos.jpg /etc/nixos/
     sudo nixos-rebuild switch
     echo "NixOS: Done."
@@ -178,7 +187,7 @@ full_setup() {
     read -p "Reboot [Y/n]: " options
     options="${options:-Y}"
 
-    if  [[ "$options" =~ ^[Yy]$ ]]; then
+    if [[ "$options" =~ ^[Yy]$ ]]; then
         echo "Rebooting..."
         sudo reboot
     else
@@ -188,28 +197,33 @@ full_setup() {
 
 echo "Configuration Options\n"
 echo "[1] Full setup"
-echo "[2] Bash"
-echo "[3] Btop"
-echo "[4] Cava"
-echo "[5] Kitty"
-echo "[6] Neofetch"
-echo "[7] Tmux"
-echo "[8] Vim"
-echo "[9] Nerd Fonts"
-echo "[10] Exit"
+echo "[2] NixOS"
+echo "[3] Bash"
+echo "[4] Btop"
+echo "[5] Cava"
+echo "[6] Kitty"
+echo "[7] Neofetch"
+echo "[8] Tmux"
+echo "[9] Vim"
+echo "[10] Nerd Fonts"
+echo "[11] Exit"
 
 read -p "Enter option: " option
 
 case $option in
-    1) full_setup ;;
-    2) bash ;;
-    3) btop ;;
-    4) cava ;;
-    5) kitty ;;
-    6) neofetch ;;
-    7) tmux ;;
-    8) vim ;;
-    9) nerdfonts ;;
-    10) echo "Exit..."; exit ;;
-    *) echo "Invalid option." ;;
+1) full_setup ;;
+2) nixos ;;
+3) bash ;;
+4) btop ;;
+5) cava ;;
+6) kitty ;;
+7) neofetch ;;
+8) tmux ;;
+9) vim ;;
+10) nerdfonts ;;
+11)
+    echo "Exit..."
+    exit
+    ;;
+*) echo "Invalid option." ;;
 esac
