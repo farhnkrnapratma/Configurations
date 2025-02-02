@@ -152,11 +152,12 @@ vim() {
 
 nixos() {
     copy f 1 ./nixos/configuration.nix /etc/nixos/
-    copy f 1 ./nixos/audio-configuration.nix /etc/nixos/
-    copy f 1 ./nixos/excluded-packages.nix /etc/nixos/
-    copy f 1 ./nixos/networking-configuration.nix /etc/nixos/
-    copy f 1 ./nixos/system-packages.nix /etc/nixos/
-    copy f 1 ./nixos/user-configuration.nix /etc/nixos/
+    copy f 1 ./nixos/audio.nix /etc/nixos/
+    copy f 1 ./nixos/exclude.nix /etc/nixos/
+    copy f 1 ./nixos/networking.nix /etc/nixos/
+    copy f 1 ./nixos/packages.nix /etc/nixos/
+    copy f 1 ./nixos/security.nix /etc/nixos/
+    copy f 1 ./nixos/user.nix /etc/nixos/
     copy f 1 ./appearance/wallpaper/nixos.jpg /etc/nixos/
     sudo nixos-rebuild switch
     echo "NixOS: Done."

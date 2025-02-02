@@ -3,12 +3,12 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./system-packages.nix
-    ./excluded-packages.nix
-    ./user-configuration.nix
-    ./security-configuration.nix
-    ./networking-configuration.nix
-    ./audio-configuration.nix
+    ./packages.nix
+    ./exclude.nix
+    ./user.nix
+    ./security.nix
+    ./networking.nix
+    ./audio.nix
   ];
 
   # System Configuration
