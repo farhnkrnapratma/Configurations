@@ -37,6 +37,7 @@ set nocompatible
 set termguicolors
 set showmode
 set number
+set relativenumber
 set ruler
 set tabstop=4
 set shiftwidth=4

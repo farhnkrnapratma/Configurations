@@ -164,7 +164,7 @@ nixos() {
 }
 
 full_setup() {
-    if [ $(uname -n) = "NixOS" ]; then
+    if [ $(grep '^PRETTY_NAME' /etc/os-release | cut -d= -f2 | tr -d '"') = "NixOS" ]; then
         nixos
         bash
         btop
@@ -174,7 +174,7 @@ full_setup() {
         tmux
         vim
     else
-        #nerdfonts
+        nerdfonts
         bash
         btop
         cava
