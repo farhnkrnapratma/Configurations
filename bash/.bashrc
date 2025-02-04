@@ -5,7 +5,7 @@ export VISUAL=vim
 # PS1 prompt with git branch
 git_branch() {
     if git rev-parse --is-inside-work-tree &>/dev/null; then
-        echo -e "\033[1;36m  (\033[0m\033[1;35m$(git branch --show-current)\033[0m\033[36m)"
+        echo -e "\033[1;36m  (\033[0m\033[1;35m$(git branch --show-current)\033[0m\033[36m)"
     fi
 }
 

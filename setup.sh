@@ -174,7 +174,7 @@ full_setup() {
         tmux
         vim
     else
-        nerdfonts
+        #nerdfonts
         bash
         btop
         cava
