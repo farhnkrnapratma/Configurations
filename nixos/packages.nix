@@ -1,16 +1,17 @@
 { pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # KDE Packages
-    kdePackages.kdeconnect-kde
+    kdePackages.kcolorchooser
 
     # Development Tools
     vim
     vscode
+    jetbrains-toolbox
     gh
     git
-    ctags
 
     # System Utilities
     tmux
@@ -26,19 +27,13 @@
     spotify
     cava
     libreoffice-fresh
-    google-chrome
-    brave
-    tor-browser
-    steam
-    thunderbird
-    sniffnet
 
-    # SDDM Catppuccin
+    # Appearance
     (catppuccin-sddm.override {
       flavor = "mocha";
       font  = "UbuntuSansMono NF Medium";
       fontSize = "12";
-      background = "${./nixos.jpg}";
+      background = "${./Mountain_Desktop_8.png}";
       loginBackground = true;
     })
     catppuccin-kde

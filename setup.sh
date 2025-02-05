@@ -151,14 +151,22 @@ vim() {
 }
 
 nixos() {
-    copy f 1 ./nixos/configuration.nix /etc/nixos/
     copy f 1 ./nixos/audio.nix /etc/nixos/
+    copy f 1 ./nixos/bootloader.nix /etc/nixos/
+    copy f 1 ./nixos/configuration.nix /etc/nixos/
+    copy f 1 ./nixos/desktop.nix /etc/nixos/
     copy f 1 ./nixos/exclude.nix /etc/nixos/
+    copy f 1 ./nixos/fonts.nix /etc/nixos/
+    copy f 1 ./nixos/hardware.nix /etc/nixos/
+    copy f 1 ./nixos/locale.nix /etc/nixos/
     copy f 1 ./nixos/networking.nix /etc/nixos/
+    copy f 1 ./nixos/nixld.nix /etc/nixos/
+    copy f 1 ./nixos/optional.nix /etc/nixos/
     copy f 1 ./nixos/packages.nix /etc/nixos/
+    copy f 1 ./nixos/sddm.nix /etc/nixos/
     copy f 1 ./nixos/security.nix /etc/nixos/
     copy f 1 ./nixos/user.nix /etc/nixos/
-    copy f 1 ./appearance/wallpaper/nixos.jpg /etc/nixos/
+    copy f 1 ./appearance/wallpaper/Mountain/Desktop/Mountain_Desktop_8.png /etc/nixos/
     sudo nixos-rebuild switch
     echo "NixOS: Done."
 }
