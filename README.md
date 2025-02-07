@@ -1,8 +1,10 @@
 ## Setup
 
-To setup all configuration files automatically, you can run the commands below:
+To set all configuration files automatically, run the commands below:
 
 ```Bash
-$ chmod +x setup.sh
-$ ./setup.sh
+chmod +x setup.sh
+```
+```
+./setup.sh
 ```
